@@ -1,0 +1,24 @@
+1.注册一个provider
+<provider
+    android:name="android.support.v4.content.FileProvider"
+    android:authorities="com.test.demo.fileprovider"
+    android:exported="false"
+    android:grantUriPermissions="true">
+    <meta-data
+        android:name="android.support.FILE_PROVIDER_PATHS"
+        android:resource="@xml/file_paths" />
+</provider>
+
+2.编写resource xml file
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <root-path name="root" path="" /> // 代表设备的根目录new File("/");
+    <files-path name="files" path="" /> // 代表context.getFilesDir()
+    <cache-path name="cache" path="" /> // 代表context.getCacheDir()
+    <external-path name="external" path="" /> // 代表Environment.getExternalStorageDirectory()
+    <external-files-path name="name" path="path" /> // 代表context.getExternalFilesDirs()
+     <external-cache-path name="name" path="path" /> // 代表getExternalCacheDirs()
+</paths>
+  
+  ps: "." 意味着路径下的全部文件
+  <external-cache-path name="name" path="." />
