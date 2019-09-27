@@ -1,0 +1,15 @@
+1.xml文件夹中添加network_security_config.xml
+
+2.内容
+
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+</network-security-config>
+
+3.配置Manifest
+android:networkSecurityConfig="@xml/network_security_config"
