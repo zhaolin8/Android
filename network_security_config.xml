@@ -6,7 +6,7 @@
 <network-security-config>
     <base-config cleartextTrafficPermitted="true">
         <trust-anchors>
-            <certificates src="system" />
+            <certificates src="system" /> <!--信任系统证书-->
         </trust-anchors>
     </base-config>
 </network-security-config>
