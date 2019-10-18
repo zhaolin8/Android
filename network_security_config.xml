@@ -13,3 +13,6 @@
 
 3.配置Manifest
 android:networkSecurityConfig="@xml/network_security_config"
+
+
+ps:webview加载http页面, Manifest加上android:usesCleartextTraffic="true"
