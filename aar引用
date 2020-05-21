@@ -24,3 +24,7 @@ allprojects {
         }
     }
 }
+
+dependencies {
+    api(name: 'aar名称', ext: 'aar')
+}
