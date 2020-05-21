@@ -9,3 +9,18 @@
  dependencies {
     compile(name: 'aar名称', ext: 'aar')
 }
+
+
+多Module共用aar
+在project/build.gradle文件中的配置
+allprojects {
+    repositories {
+        google()
+        jcenter()
+
+        flatDir {
+            // 声明所有工程都将'libbase'库下的'libs'目录做为依赖库
+            dirs project(':libbase').file('libs')
+        }
+    }
+}
